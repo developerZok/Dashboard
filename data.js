@@ -8,7 +8,7 @@ const customers = [
     {
         name: "Bonnie Green",
         email: "email@example.com",
-        price: "$$67",
+        price: "$67",
         img: "../images/avatar2.png"
     },
     {
