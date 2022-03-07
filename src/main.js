@@ -20,49 +20,39 @@ let menuIsHiddenThree = false;
 let menuIsHiddenFour = false;
 
 // one menu btn
+
+function menuButtonOpen(button, dropDownImage) {
+    button.classList.add('bg-gray-100', 'rounded-xl')
+    dropDownImage.classList.add('bg__img--dropdownActive')
+}
+
+function menuButtonHide(button, dropDownImage) {
+    button.classList.remove('bg-gray-100')
+    dropDownImage.classList.remove('bg__img--dropdownActive')
+}
+
 menuBtn.addEventListener('click', () => {
     dropdown.classList.toggle('hidden')
     dropdown.classList.toggle('flex')
 
-    if (menuIsHiddenOne == false) {
-        menuBtn.classList.add('bg-gray-100', 'rounded-xl')
-        dropdownImg.classList.add('bg__img--dropdownActive')
-        menuIsHiddenOne = true
-    } else {
-        menuBtn.classList.remove('bg-gray-100')
-        dropdownImg.classList.remove('bg__img--dropdownActive')
-        menuIsHiddenOne = false
-    }
+    menuIsHiddenOne ? menuButtonHide(menuBtn, dropdownImg) : menuButtonOpen(menuBtn, dropdownImg)
+    menuIsHiddenOne = !menuIsHiddenOne
 })
 // two menu btn
 menuBtnTwo.addEventListener('click', () => {
     dropdownTwo.classList.toggle('hidden')
     dropdownTwo.classList.toggle('flex')
 
-    if (menuIsHiddenTwo == false) {
-        menuBtnTwo.classList.add('bg-gray-100', 'rounded-xl')
-        dropdownImgTwo.classList.add('bg__img--dropdownActive')
-        menuIsHiddenTwo = true
-    } else {
-        menuBtnTwo.classList.remove('bg-gray-100')
-        dropdownImgTwo.classList.remove('bg__img--dropdownActive')
-        menuIsHiddenTwo = false
-    }
+    menuIsHiddenTwo ? menuButtonHide(menuBtnTwo, dropdownImgTwo) : menuButtonOpen(menuBtnTwo, dropdownImgTwo)
+    menuIsHiddenTwo = !menuIsHiddenTwo
 })
 // three menu btn
 menuBtnThree.addEventListener('click', () => {
     dropdownThree.classList.toggle('hidden')
     dropdownThree.classList.toggle('flex')
 
-    if (menuIsHiddenThree == false) {
-        menuBtnThree.classList.add('bg-gray-100', 'rounded-xl')
-        dropdownImgThree.classList.add('bg__img--dropdownActive')
-        menuIsHiddenThree = true
-    } else {
-        menuBtnThree.classList.remove('bg-gray-100')
-        dropdownImgThree.classList.remove('bg__img--dropdownActive')
-        menuIsHiddenThree = false
-    }
+    menuIsHiddenThree ? menuButtonHide(menuBtnThree, dropdownImgThree) : menuButtonOpen(menuBtnThree, dropdownImgThree)
+    menuIsHiddenThree = !menuIsHiddenThree
 })
 //  four menu btn
 menuBtnMessage.addEventListener('click', () => {
