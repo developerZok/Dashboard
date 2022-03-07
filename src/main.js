@@ -1,5 +1,6 @@
-// button addEventListener
+// vertical navbar js codes
 
+// button addEventListener
 const menuBtn = document.querySelector('#menu-btn')
 const dropdown = document.querySelector('#dropdown')
 const menuBtnTwo = document.querySelector('#menu-btnTwo')
@@ -74,7 +75,9 @@ menuBtnMessage.addEventListener('click', () => {
     }
 
 })
-// chart js
+// end off vertical navbar js codes
+
+// chart js codes
 
 const ctx = document.querySelector('#myChart').getContext("2d");
 
@@ -120,7 +123,7 @@ const config = {
 };
 
 const myChart = new Chart(ctx, config);
-// end off chart js
+// end off chart js codes
 
 // customers date
 const customerBox = document.querySelector("#customer__box");
@@ -296,7 +299,7 @@ navbarBtn.addEventListener("click", () => {
 
     navbarMenu.classList.add("show")
     navbarMenu.classList.remove("hide")
-    navbarBtnClose.classList.add("navbar__btn--show")
+    navbarBtnClose.classList.add("navbar__close--show")
 })
 navbarBtnClose.addEventListener("click", () => {
     navbarMenu.classList.remove("show")
