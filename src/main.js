@@ -56,6 +56,7 @@ menuBtnThree.addEventListener('click', () => {
 })
 //  four menu btn
 menuBtnMessage.addEventListener('click', () => {
+    
     if (menuIsHiddenFour === false) {
         menuBtnMessage.classList.add('bg-gray-100', 'rounded-xl')
         menuIsHiddenFour = true
